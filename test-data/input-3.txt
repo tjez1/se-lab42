@@ -1,0 +1,9 @@
+# 5. Tries to fire both stores all at once
+GT4500,1,0,1,0
+TORPEDO,ALL
+TORPEDO,ALL
+
+# 6. Primary was fired last time, secondary is empty, fire primary again
+GT4500,2,0,0,0
+TORPEDO,SINGLE
+TORPEDO,SINGLE

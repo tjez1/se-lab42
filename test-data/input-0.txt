@@ -31,6 +31,21 @@ GT4500,2,0,0,0
 TORPEDO,SINGLE
 TORPEDO,SINGLE
 
+# 7. Primary was fired last time, secondary is empty, fire primary again, which is also empty now
+GT4500,1,0,0,0
+TORPEDO,SINGLE
+TORPEDO,SINGLE
+
+# 8. Secondary was fired last time, primary is empty, fire secondary again
+GT4500,1,0,1,0
+TORPEDO,SINGLE
+TORPEDO,SINGLE
+TORPEDO,SINGLE
+
+# 9. Fire all, but one is empty 
+GT4500,0,0,1,0
+TORPEDO,ALL
+
 # Handle bad command
 BADCOMMAND
 
@@ -45,5 +60,3 @@ TORPEDO
 
 # Invalid torpedo argument 
 TORPEDO,WRONGARG
-
-# IllegalArgument 1.

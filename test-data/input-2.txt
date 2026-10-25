@@ -1,0 +1,9 @@
+# 3. If next in line is empty, then it tries to fire the other store
+GT4500,0,1,2,0
+TORPEDO,SINGLE
+TORPEDO,SINGLE
+
+# 4. If one of the stores reports a failure, it doesn't try to use the other one
+GT4500,2,0,1,1
+TORPEDO,SINGLE
+TORPEDO,SINGLE
