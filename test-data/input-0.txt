@@ -1,3 +1,24 @@
-# Create a ship with stocked torpedo stores that never fail
-GT4500,10,0,10,0
-TORPEDO,SINGLE  # should have fired from the primary store
+# 1. It tries to fire primary store first
+GT4500,1,1,1,0
+TORPEDO,SINGLE
+TORPEDO,SINGLE
+
+# 2. Alternating
+GT4500,1,0,1,0
+TORPEDO,SINGLE
+TORPEDO,SINGLE
+
+# 3. If next in line is empty, then it tries to fire the other store
+GT4500,0,1,2,0
+TORPEDO,SINGLE
+TORPEDO,SINGLE
+
+# 4. If one of the stores reports a failure, it doesn't try to use the other one
+GT4500,2,0,1,1
+TORPEDO,SINGLE
+TORPEDO,SINGLE
+
+# 5. Tries to fire both stores all at once
+GT4500,1,0,1,0
+TORPEDO,ALL
+TORPEDO,ALL
