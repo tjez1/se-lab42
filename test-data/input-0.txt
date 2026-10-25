@@ -1,3 +1,6 @@
+# 0. No ship has been initialized
+TORPEDO,ALL
+
 # 1. It tries to fire primary store first
 GT4500,1,1,1,0
 TORPEDO,SINGLE
@@ -22,3 +25,25 @@ TORPEDO,SINGLE
 GT4500,1,0,1,0
 TORPEDO,ALL
 TORPEDO,ALL
+
+# 6. Primary was fired last time, secondary is empty, fire primary again
+GT4500,2,0,0,0
+TORPEDO,SINGLE
+TORPEDO,SINGLE
+
+# Handle bad command
+BADCOMMAND
+
+# GT4500 without args
+GT4500
+
+# GT4500 wrong arg
+GT4500,a,b,c,d
+
+# Torpedo without args
+TORPEDO
+
+# Invalid torpedo argument 
+TORPEDO,WRONGARG
+
+# IllegalArgument 1.
